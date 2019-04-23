@@ -74,19 +74,19 @@
                                                 <option value="2">Trujillo</option>
                                                 <option value="3">Alonso</option>
                                             </select>
-                                            <label>Tipo de tutoria</label>
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" id="regu" name="tuto" class="custom-control-input">
-                                                <label class="custom-control-label" for="regu">Regularización</label>
+                                            <div class="form-group">
+                                                <label for="places-avaible">Lugares disponibles</label>
+                                                <input type="number" class="form-control" id="places-avaible">
+                                            </div>                          
+                                            <label for="ts-type">Tipo de tutoría</label>
+                                            <div class="form-group w-60 d-flex justify-content-around" id="ts-type">
+                                                <label class="radio-inline"><input type="radio" value="1"> Regularización</label>
+                                                <label class="radio-inline"><input type="radio" value="2"> Recuperación</label>
                                             </div>
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" id="recu" name="tuto" class="custom-control-input">
-                                                <label class="custom-control-label" for="recu">Recuperación</label>
+                                            <div class="form-group w-80 d-flex justify-content-around" id="ts-type">
+                                                <label for="fecha_ini">Fecha de inicio <input type="date" name="fecha_ini"></label>
+                                                <label for="fecha_ter">Fecha de término <input type="date" name="fecha_ter"></label>
                                             </div>
-                                            <label for="fecha_ini">Fecha de inicio</label>
-                                            <input type="date" name="fecha_ini">
-                                            <label for="fecha_ter">Fecha de término</label>
-                                            <input type="date" name="fecha_ter">
                                         </div>
                                     </div>
                                     <div class="form-row">
@@ -99,7 +99,9 @@
                                                 <th>Viernes</th>
                                             </thead>
                                             <tbody>
-                                                <label for="time-start">Hora de inicio</label>
+                                                <tr>
+                                                    <td colspan="5"><label for="time-start">Hora de inicio</label></td>
+                                                </tr>
                                                 <tr id="time-start">
                                                     <td><input type="text" id="start-monday"></td>
                                                     <td><input type="text" id="start-tuesday"></td>
@@ -107,7 +109,9 @@
                                                     <td><input type="text" id="start-thursday"></td>
                                                     <td><input type="text" id="start-friday"></td>
                                                 </tr>
-                                                <label for="time-end">Hora de término</label>
+                                                <tr>
+                                                    <td colspan="5"><label for="time-end">Hora de término</label></td>
+                                                </tr>
                                                 <tr id="time-end">
                                                     <td><input type="text" id="end-monday"></td>
                                                     <td><input type="text" id="end-tuesday"></td>
@@ -118,11 +122,12 @@
                                             </tbody>
                                         </table>
                                     </div>
+                                    <div class="modal-footer">
+                                        <input type="reset" class="btn btn-secondary" value="Limpiar">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-primary">Registrar tutoría</button>
+                                    </div>
                                 </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
                             </div>
                         </div>
                     </div>
