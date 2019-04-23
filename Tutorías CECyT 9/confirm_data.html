@@ -4,8 +4,21 @@
 <head>
     <meta lang="es">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="CSS/cssnais.css">
     <title>Confirmar</title>
+    <!--Quitar esta cosa, la dejo porque ustedes la pusieron, favor de cambiar esto-->
+    <style>
+        body {
+            background: url('http://cdn.ejecentral.com.mx/uploads/2016/05/%40casaTellier.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+        }
+
+        .fa-plus {
+            color: #3b5998;
+        }
+    </style>
 </head>
 
 <body>
@@ -36,15 +49,18 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-4">
                                             <label for="boleta">Boleta</label>
-                                            <input type="number" class="form-control" id="boleta" placeholder="2017XXXXXX">
+                                            <input type="number" class="form-control" id="boleta">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="grupo">Grupo</label>
-                                            <input type="text" class="form-control" id="grupo" placeholder="6IV5">
+                                            <input type="text" class="form-control" id="grupo">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="sex">Sexo</label>
-                                            <input type="text" class="form-control" id="sex" placeholder="6IV5">
+                                            <div class="form-group d-flex justify-content-around" id="sex">
+                                                <label class="radio-inline"><input type="radio" name="optradio">Hombre</label>
+                                                <label class="radio-inline"><input type="radio" name="optradio">Mujer</label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -63,18 +79,20 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-4">
                                             <label for="email">Email</label>
-                                            <input type="email" class="form-control" id="email" placeholder="Email">
+                                            <input type="email" class="form-control" id="email" placeholder="ejemplo@dominio.com">
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <label for="telcasa">Teléfono de Casa</label>
-                                            <input type="text" class="form-control" id="telcasa" placeholder="xxxxxxxxx">
+                                            <label for="telcasa">Teléfono fijo</label>
+                                            <input type="text" class="form-control" id="telcasa" placeholder="XXXX XXXX">
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <label for="celular">Celular</label>
-                                            <input type="text" class="form-control" id="celular" placeholder="xxxxxxxxx">
+                                            <label for="celular">Teléfono celular</label>
+                                            <input type="text" class="form-control" id="celular" placeholder="XX XXXX XXXX">
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                                    <div class="form-row d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-primary">Confirmar</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
