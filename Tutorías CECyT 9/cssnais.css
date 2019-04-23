@@ -1,0 +1,10 @@
+body {
+  background: url('http://cdn.ejecentral.com.mx/uploads/2016/05/%40casaTellier.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.fa-plus{
+  color: #3b5998;
+}
