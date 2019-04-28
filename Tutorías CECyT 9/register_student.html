@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Registrar alumno</title>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-info">
         <div class="col-10">
@@ -26,10 +27,6 @@
                         <a class="nav-link" href="#">Cerrar sesión</a>
                     </li>
                 </ul>
-                <!--<form class="form-inline my-2 my-lg-0">
-       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-	</form>-->
             </div>
         </div>
     </nav>
@@ -39,63 +36,80 @@
                 <div class="card bg-light mb-3">
                     <div class="card-header"><b>Inicio de Sesion</b></div>
                     <div class="card-body">
-                        <form>
-                            <div class="form-row d-flex justify-content-end">
-                                <div class="form-group col-auto d-flex flex-column">
-                                    <label class="label" for="photo">Fotografía infantil</label>
-                                    <img src="https://picsum.photos/110/110/?image=641" class="rounded" alt="Fotografía infantil" id="photo">
-                                    <input type="file" style="display: none;" id="file-input" lang="es">
+                        <form id="confirmation-form">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                            <label for="name">Nombre(s)</label>
+                                            <input type="text" class="form-control" id="name">
+                                            <small id="name-helper" class="text-danger"></small>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="f-lastname">Apellido paterno</label>
+                                            <input type="text" class="form-control" id="f-lastname">
+                                            <small id="f-lastname-helper" class="text-danger"></small>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="m-lastname">Apellido materno</label>
+                                            <input type="text" class="form-control" id="m-lastname">
+                                            <small id="m-lastname-helper" class="text-danger"></small>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                            <label for="boleta">Boleta</label>
+                                            <input type="number" class="form-control" id="boleta">
+                                            <small id="boleta-helper" class="text-danger"></small>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="group">Grupo</label>
+                                            <input type="text" class="form-control" id="group">
+                                            <small id="group-helper" class="text-danger">¿El grupo sí va, qué pasa si no tiene?</small>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="sex">Sexo</label>
+                                            <div class="form-group d-flex justify-content-around" id="sex">
+                                                <label class="radio-inline"><input type="radio" name="sex-radio-btn" value="1"> Hombre</label>
+                                                <label class="radio-inline"><input type="radio" name="sex-radio-btn" value="2"> Mujer</label>
+                                            </div>
+                                            <small id="sex-helper" class="text-danger"></small>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="name">Nombre(s)</label>
-                                    <input type="text" class="form-control" id="name">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="f-lastname">Apellido paterno</label>
-                                    <input type="text" class="form-control" id="f-lastname">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="m-lastname">Apellido materno</label>
-                                    <input type="text" class="form-control" id="m-lastname">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="boleta">Boleta</label>
-                                    <input type="number" class="form-control" id="boleta">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="group">Grupo</label>
-                                    <input type="text" class="form-control" id="group">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="sex">Sexo</label>
-                                    <div class="form-group d-flex justify-content-around" id="sex">
-                                        <label class="radio-inline" name="sex-radio-btn"><input type="radio"> Hombre</label>
-                                        <label class="radio-inline" name="sex-radio-btn"><input type="radio"> Mujer</label>
+                                <div class="col-2">
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="mw-80 d-flex flex-column">
+                                            <label class="label" for="photo">Fotografía infantil</label>
+                                            <img src="https://picsum.photos/110/110/?image=641" class="rounded" alt="Fotografía infantil" id="photo">
+                                            <input type="file" style="display: none;" id="file-input" lang="es">
+                                        </div>
+                                        <small id="file-helper" class="text-danger"></small>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="ejemplo@dominio.com">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="telephone">Teléfono fijo</label>
-                                    <input type="text" class="form-control" id="telephone" placeholder="XXXX XXXX">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="cellphone">Teléfono celular</label>
-                                    <input type="text" class="form-control" id="cellphone" placeholder="XX XXXX XXXX">
-                                </div>
-                            </div>
-                            <div class="form-row justify-content-center">
-                                <div class="form-group col-auto">
-                                    <button type="reset" class="btn btn-light">Limpiar</button>
-                                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" id="email" placeholder="ejemplo@dominio.com">
+                                            <small id="email-helper" class="text-danger"></small>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="telephone">Teléfono fijo</label>
+                                            <input type="text" class="form-control" id="telephone" placeholder="XXXX XXXX">
+                                            <small id="telephone-helper" class="text-danger"></small>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="cellphone">Teléfono celular</label>
+                                            <input type="text" class="form-control" id="cellphone" placeholder="XX XXXX XXXX">
+                                            <small id="cellphone-helper" class="text-danger"></small>
+                                        </div>
+                                    </div>
+                                    <div class="form-row d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-primary" id="confirm-btn">Confirmar</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -108,16 +122,5 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
-        window.onload = ()=>{
-            initPicker();
-        };
-
-        const initPicker = ()=>{
-            document.querySelector("#photo").addEventListener("click", ()=>{
-                document.querySelector("#file-input").click();
-            });
-        };
-    </script>
-</body>
-</html>
+    <script src="JS/confirm_data.js"></script>
+</body></html>
