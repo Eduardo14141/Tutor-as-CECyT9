@@ -89,6 +89,7 @@ const validateImage = () => {
         helper.textContent = "Sólo se admiten archivos .jpg y .png";
         return false;
     }
+    helper.textContent = "";
     return true;
 };
 
