@@ -10,17 +10,20 @@ const validateName = () =>{
     
     if(!name){
         input.className = input.className += " is-invalid";
+        input.focus();
         helper.textContent = "Ingresa tu nombre(s)";
         return false;
     }
     if(name.split(" ").length > 3){
         // Tres nombres como máximo
         input.className = input.className += " is-invalid";
+        input.focus();
         helper.textContent = "Asegúrate de ingresar correctamente tu nombre";
         return false;
     }
     if(!/^[a-zá-úñü ]{2,30}$/i.test(name)){
         input.className = input.className += " is-invalid";
+        input.focus();
         helper.textContent = "Asegúrate de ingresar correctamente tu nombre";
         return false;
     }
@@ -50,17 +53,20 @@ const validateLastname = (input, helper) =>{
     
     if(!lastname){
         input.className = input.className += " is-invalid";
+        input.focus();
         helper.textContent = "Ingresa tu apellido";
         return false;
     }
     if(lastname.split(" ").length > 2){
         // Apellido como "De La" "De Dios"
         input.className = input.className += " is-invalid";
+        input.focus();
         helper.textContent = "Asegúrate de ingresar correctamente tu apellido";
         return false;
     }
     if(!/^[a-zá-úñü ]{2,15}$/i.test(lastname)){
         input.className = input.className += " is-invalid";
+        input.focus();
         helper.textContent = "Asegúrate de ingresar correctamente tu nombre";
         return false;
     }
@@ -78,16 +84,19 @@ const validateBoleta = () =>{
     
     if(!number){
         input.className = input.className += " is-invalid";
+        input.focus();
         helper.textContent = "Completa este campo";
         return false;
     }
     if(!/^[0-9]{10}$/.test(number)){
         input.className = input.className += " is-invalid";
+        input.focus();
         helper.textContent = "La boleta no es válida";
         return false;
     }
     if(parseInt(number.substr(0,4)) > date.getFullYear() + 1){
         input.className = input.className += " is-invalid";
+        input.focus();
         helper.textContent = "La boleta no es válida";
         return false;
     }
@@ -117,12 +126,13 @@ const validateTelephone = () =>{
     let helper = document.querySelector("#telephone-help");
     input.className = input.className.replace(" is-invalid", "");
     
-    if(!number){
+    if(number.length === 0){
         console.log("Atender en un confirm si no quiere dejar teléfono de contacto");
         return true;
     }    
-    if(/^[0-9]{8}$/.test(number)){
+    if(!/^[0-9]{8}$/.test(number)){
         input.className = input.className += " is-invalid";
+        input.focus();
         helper.textContent = "Asegura introducir el número en formato de 8 dígitos";
         return false;
     }
@@ -135,12 +145,13 @@ const validateCellphone = () =>{
     let helper = document.querySelector("#cellphone-help");
     input.className = input.className.replace(" is-invalid", "");
     
-    if(!number){
+    if(number.length === 0){
         console.log("Atender en un confirm si no quiere dejar teléfono de contacto");
         return true;
     }    
-    if(/^[0-9]{8}$/.test(number)){
+    if(!/^[0-9]{10}$/.test(number)){
         input.className = input.className += " is-invalid";
+        input.focus();
         helper.textContent = "Asegura introducir el número en formato de 10 dígitos";
         return false;
     }
@@ -157,6 +168,7 @@ const validateEmail = ()=>{
     let not_ok = emailIsInvalid(email);
     if(!!not_ok){
         input.className = input.className += " is-invalid";
+        input.focus();
         helper.textContent = not_ok;
         return false;
     }
