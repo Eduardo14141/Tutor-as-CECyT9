@@ -18,9 +18,9 @@ const initFormValidation = ()=>{
         if(!validateBoleta())
             return false;
         if(!validateSex())
-            return false;*/
-        if(!validateEmail())
             return false;
+        if(!validateEmail())
+            return false;*/
         
     });
 };

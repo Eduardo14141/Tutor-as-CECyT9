@@ -5,8 +5,8 @@ const validateStudentsData = ()=>{
 const validateName = () =>{
     let input = document.querySelector("#name");
     let name = input.value;
-    input.className = input.className.replace(" is-invalid", "");
     let helper = document.querySelector("#name-help");
+    input.className = input.className.replace(" is-invalid", "");
     
     if(!name){
         input.className = input.className += " is-invalid";
@@ -111,19 +111,40 @@ const validateSex = ()=>{
     helper.textContent = "";
     return true;
 }
-const validateTelephone = number =>{
-    number = number.replace(/ /g, "");
+const validateTelephone = () =>{
+    let input = document.querySelector("#telephone");
+    let number = input.value.replace(/ /g, "");
+    let helper = document.querySelector("#telephone-help");
+    input.className = input.className.replace(" is-invalid", "");
+    
+    if(!number){
+        console.log("Atender en un confirm si no quiere dejar teléfono de contacto");
+        return true;
+    }    
     if(/^[0-9]{8}$/.test(number)){
-        this.focus();
+        input.className = input.className += " is-invalid";
+        helper.textContent = "Asegura introducir el número en formato de 8 dígitos";
         return false;
     }
+    helper.textContent = "";
+    return true;
 }
-const validateCellphone = number =>{
-    number = number.replace(/ /g, "");
-    if(/^[0-9]{10}$/.test(number)){
-        this.focus();
+const validateCellphone = () =>{
+    let input = document.querySelector("#cellphone");
+    let number = input.value.replace(/ /g, "");
+    let helper = document.querySelector("#cellphone-help");
+    input.className = input.className.replace(" is-invalid", "");
+    
+    if(!number){
+        console.log("Atender en un confirm si no quiere dejar teléfono de contacto");
+        return true;
+    }    
+    if(/^[0-9]{8}$/.test(number)){
+        input.className = input.className += " is-invalid";
+        helper.textContent = "Asegura introducir el número en formato de 10 dígitos";
         return false;
     }
+    helper.textContent = "";
     return true;
 }
 
