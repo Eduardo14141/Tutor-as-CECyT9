@@ -30,37 +30,37 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="tutorships_info.html">Sistema de tutorías</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="tutorships_info.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="enroll_tutorships.html">Inscribir tutorías</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cerrar sesión</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Nombre de la tutoría" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
     <div class="col-md-12 h-100">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="tutorships_info.html">Sistema de tutorías</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="tutorships_info.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="enroll_tutorships.html">Inscribir tutorías</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Cerrar sesión</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Busca tu asignatura" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                </form>
-            </div>
-        </nav>
-        <!--d-flex justify-content-center-->
         <div class="row">
             <div class="mt-5 container d-flex justify-content-end">
-                <button type="button" class="btn btn-outline-primary"><i class="fas fa-plus"></i> Agregar tutoría</button>
+                <button type="button" class="btn btn-outline-primary" id="add-tutorship-btn"><i class="fas fa-plus"></i> Agregar tutoría</button>
             </div>
         </div>
-        <div class="row">
+        <!-- Importante dejar el display none, a menos que quieran cambiar el archivo js en initComponents -->
+        <div class="row" id="div-form-add-tutorship" style="display: none;">
             <div class="container rounded">
                 <form id="add-tutorship-form">
                     <div class="form-row d-flex justify-content-around flex-wrap mt-3">
@@ -161,16 +161,102 @@
                     </div>
                     <div class="d-flex justify-content-end">
                         <input type="reset" class="btn btn-info form-footer" value="Limpiar">
-                        <button type="button" class="btn btn-info form-footer" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-info form-footer" id="cancel-register">Cancelar</button>
                         <button type="button" class="btn btn-primary form-footer">Registrar tutoría</button>
                     </div>
                 </form>
             </div>
-
+        </div>
+        <div class="row">
+            <div class="row w-100">
+                <div class="container">
+                    <h2><b>Recuperación</b></h2>
+                    <span>
+                        <h3>Física III</h3>
+                        <div class="card-body">
+                <table class="table">
+                    <thead style="background-color: #660033; color: snow;">
+                        <tr>
+                            <th>Profesor</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miercoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                            <th>Apartar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Francisco Javier Ayala Falcón</td>
+                            <td>13:00-14:50</td>
+                            <td></td>
+                            <td>15:00 - 15:50</td>
+                            <td>15:00 - 16:40</td>
+                            <td></td>
+                            <td>Poner Icono</td>
+                        </tr>
+                        <tr>
+                            <td>Raúl Ayala Falcón</td>
+                            <td></td>
+                            <td>13:00 - 14:50</td>
+                            <td></td>
+                            <td>15:00 - 15:50</td>
+                            <td>13:00 - 13:50</td>
+                            <td>de un lápiz</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+                    </span>
+                </div>
+            </div>
+            <div class="row w-100">
+                <div class="container">
+                    <h2><b>Revalidación</b></h2>
+                    <span>
+                        <h3>Química III</h3>
+                        <div class="card-body">
+                <table class="table">
+                    <thead style="background-color: #660033; color: snow;">
+                        <tr>
+                            <th>Profesor</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miercoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                            <th>Apartar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jorge Cortés Perez</td>
+                            <td>13:00-14:50</td>
+                            <td></td>
+                            <td>15:00 - 15:50</td>
+                            <td>15:00 - 16:40</td>
+                            <td></td>
+                            <td>Poner Icono</td>
+                        </tr>
+                        <tr>
+                            <td>Yunuen Apellidos Locos</td>
+                            <td></td>
+                            <td>13:00 - 14:50</td>
+                            <td></td>
+                            <td>15:00 - 15:50</td>
+                            <td>13:00 - 13:50</td>
+                            <td>de un lápiz</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+                    </span>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="JS/register_tutorship.js"></script>
 </body></html>
