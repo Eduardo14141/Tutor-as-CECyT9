@@ -3,42 +3,52 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Registrar alumno</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-info">
-        <div class="col-10">
-            <a class="navbar-brand" href="#">
-                <img src="img/jaja.jpg" width="30" height="30" class="d-inline-block align-top" alt="img">
-            </a>
-            <span class="navbar-text">
-                <h6>Administrador</h6>
-            </span></div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        </button>
-        <div class="col-2">
+    <div class="w-100 h-100">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="tutorships_info.html">Sistema de tutorías</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Tutorias<span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tutorships_info.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="enroll_tutorships.html">Inscribir tutorías</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Cerrar sesión</a>
                     </li>
                 </ul>
             </div>
-        </div>
-    </nav>
-    <div class="container-fluid vh-100 mt-3">
-        <div class="row justify-content-center align-content-center vh-100">
-            <div class="col-12">
-                <div class="card bg-light mb-3">
-                    <div class="card-header"><b>Registrar estudiante</b></div>
+        </nav>
+        <div class="container-fluid mt-5">
+            <div class="row d-flex justify-content-center align-content-center">
+                <div class="card bg-light rounded mh-100">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-around flex-wrap">
+                            <div class="align-self-center">
+                                <b>Registrar estudiante</b>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <div class="w-80 d-flex flex-column">
+                                    <label class="label text-primary" id="photo" style="cursor: pointer;">Fotografía infantil</label>
+                                </div>
+                                <input type="file" style="display: none;" id="file-input" lang="es">
+                            </div>
+                        </div>
+                        <small id="file-helper" class="text-danger d-flex justify-content-end"></small>
+                    </div>
                     <div class="card-body">
                         <form id="confirmation-form">
                             <div class="row">
-                                <div class="col-10">
+                                <div class="col-12">
                                     <div class="form-row">
                                         <div class="form-group col-md-4">
                                             <label for="name">Nombre(s)</label>
@@ -65,7 +75,7 @@
                                         <div class="form-group col-md-4">
                                             <label for="group">Grupo</label>
                                             <input type="text" class="form-control" id="group">
-                                            <small id="group-helper" class="text-danger">¿El grupo sí va, qué pasa si no tiene?</small>
+                                            <small id="group-helper" class="text-danger"></small>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="sex">Sexo</label>
@@ -74,17 +84,21 @@
                                                 <label class="radio-inline"><input type="radio" name="sex-radio-btn" value="2"> Mujer</label>
                                             </div>
                                             <small id="sex-helper" class="text-danger"></small>
+                                            <!--
+                                                Checar si es de su agrado
+                                                
+                                            <div class="form-group d-flex justify-content-around" id="sex">
+                                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                    <label class="btn btn-secondary">
+                                                        <input type="radio" name="sex-radio-btn" id="option1" value="1">Hombre
+                                                    </label>
+                                                    <label class="btn btn-secondary">
+                                                        <input type="radio" name="sex-radio-btn" id="option2" value="2">Mujer
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            -->
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="row d-flex justify-content-center">
-                                        <div class="mw-80 d-flex flex-column">
-                                            <label class="label" for="photo">Fotografía infantil</label>
-                                            <img src="https://picsum.photos/110/110/?image=641" class="rounded" alt="Fotografía infantil" id="photo">
-                                            <input type="file" style="display: none;" id="file-input" lang="es">
-                                        </div>
-                                        <small id="file-helper" class="text-danger"></small>
                                     </div>
                                 </div>
                             </div>
