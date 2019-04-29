@@ -14,7 +14,7 @@ let student_info = {};
 const initFormValidation = () => {
     document.querySelector("#confirm-btn").addEventListener("click", (evt) => {
         evt.preventDefault();
-       /* if (!validateName())
+        if (!validateName())
             return false;
         if (!lastnameValidators())
             return false;
@@ -29,7 +29,7 @@ const initFormValidation = () => {
         if (!validateTelephone())
             return false;
         if (!validateCellphone())
-            return false;*/
+            return false;
         if (!validateImage())
             return false;
         confirmData();
