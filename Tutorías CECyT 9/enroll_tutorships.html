@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="tutorias.css">
     <link href="open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width" content="maximum-scale=1">
     <title>Inscribe tus tutorías</title>
 </head>
 
 <body>
-    <div class="w-100 h-100">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="tutorships_info.html">Sistema de tutorías</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,9 +34,8 @@
                 </form>
             </div>
         </nav>
-        <div class="d-flex justify-content-around flex-wrap mt-5">
-            <div class="row w-100">
-                <div class="container">
+        <div class="d-flex flex-column mt-5 container-fluid">
+                <div class="container-fluid col-md-12 col-lg-10">
                     <span>
                         <h2>Al inscribir alguna tutoría te comprometes a:</h2>
                         <ol>
@@ -53,96 +52,108 @@
                         <p class="text-justify"></p>
                     </span>
                 </div>
-            </div>
-            <div class="row w-100">
-                <div class="container">
+            <div class="row">
+                <div class="container-fluid col-md-12 col-lg-10">
                     <h2><b>Recuperación</b></h2>
-                    <span>
-                        <h3>Física III</h3>
-                        <div class="card-body">
-                            <table class="table">
-                                <thead style="background-color: #660033; color: snow;">
-                                    <tr>
-                                        <th>Profesor</th>
-                                        <th>Lunes</th>
-                                        <th>Martes</th>
-                                        <th>Miercoles</th>
-                                        <th>Jueves</th>
-                                        <th>Viernes</th>
-                                        <th>Apartar</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Francisco Javier Ayala Falcón</td>
-                                        <td>13:00-14:50</td>
-                                        <td></td>
-                                        <td>15:00 - 15:50</td>
-                                        <td>15:00 - 16:40</td>
-                                        <td></td>
-                                        <td>Poner Icono</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Raúl Ayala Falcón</td>
-                                        <td></td>
-                                        <td>13:00 - 14:50</td>
-                                        <td></td>
-                                        <td>15:00 - 15:50</td>
-                                        <td>13:00 - 13:50</td>
-                                        <td>de un lápiz</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </span>
+                    <div class="table-responsive-md">
+                        <table class="table table-hover">
+                            <thead style="background-color: #660033; color: snow;">
+                                <tr>
+                                    <!--Se pone un style porque la documentación indica que en bootstrap 4
+                                    sirve para FireFox pero no para Chrome-->
+                                    <th> <!--style="width: 25%"-->Asignatura</th>
+                                    <th>Profesor</th>
+                                    <th>Lunes</th>
+                                    <th>Martes</th>
+                                    <th>Miercoles</th>
+                                    <th>Jueves</th>
+                                    <th>Viernes</th>
+                                    <th>Apartar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Física III</td>
+                                    <td>Francisco Javier Ayala Falcón</td>
+                                    <td>13:00-14:50</td>
+                                    <td></td>
+                                    <td>15:00 - 15:50</td>
+                                    <td>15:00 - 16:40</td>
+                                    <td></td>
+                                    <td>Poner Icono</td>
+                                </tr>
+                                <tr>
+                                    <td>Física III</td>
+                                    <td>Raúl Ayala Falcón</td>
+                                    <td></td>
+                                    <td>13:00 - 14:50</td>
+                                    <td></td>
+                                    <td>15:00 - 15:50</td>
+                                    <td>13:00 - 13:50</td>
+                                    <td>de un lápiz</td>
+                                </tr>
+                                <tr>
+                                    <td>Química I</td>
+                                    <td>Jorge Cortés Perez</td>
+                                    <td>13:00 - 14:50</td>
+                                    <td></td>
+                                    <td>15:00 - 15:50</td>
+                                    <td>13:00 - 13:50</td>
+                                    <td></td>
+                                    <td>de un lápiz</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-            <div class="row w-100">
-                <div class="container">
+            <div class="row">
+                <div class="container-fluid col-md-12 col-lg-10">
                     <h2><b>Revalidación</b></h2>
-                    <span>
-                        <h3>Química III</h3>
-                        <div class="card-body">
-                            <table class="table">
-                                <thead style="background-color: #660033; color: snow;">
-                                    <tr>
-                                        <th>Profesor</th>
-                                        <th>Lunes</th>
-                                        <th>Martes</th>
-                                        <th>Miercoles</th>
-                                        <th>Jueves</th>
-                                        <th>Viernes</th>
-                                        <th>Apartar</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Jorge Cortés Perez</td>
-                                        <td>13:00-14:50</td>
-                                        <td></td>
-                                        <td>15:00 - 15:50</td>
-                                        <td>15:00 - 16:40</td>
-                                        <td></td>
-                                        <td>Poner Icono</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Yunuen Apellidos Locos</td>
-                                        <td></td>
-                                        <td>13:00 - 14:50</td>
-                                        <td></td>
-                                        <td>15:00 - 15:50</td>
-                                        <td>13:00 - 13:50</td>
-                                        <td>de un lápiz</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </span>
+                    <div class="table-responsive-md">
+                        <table class="table table-hover">
+                            <thead style="background-color: #660033; color: snow;">
+                                <tr>
+                                    <th> <!--style="width: 25%"-->Asignatura</th>
+                                    <th>Profesor</th>
+                                    <th>Lunes</th>
+                                    <th>Martes</th>
+                                    <th>Miercoles</th>
+                                    <th>Jueves</th>
+                                    <th>Viernes</th>
+                                    <th>Apartar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Laboratorio de proyectos de tecnologías de la información III</td>
+                                    <td>Armando Álvarez Galván</td>
+                                    <td>13:00-14:50</td>
+                                    <td></td>
+                                    <td>15:00 - 15:50</td>
+                                    <td>15:00 - 16:40</td>
+                                    <td></td>
+                                    <td>Poner Icono</td>
+                                </tr>
+                                <tr>
+                                    <td>Química III</td>
+                                    <td>Yunuen Apellidos Locos</td>
+                                    <td></td>
+                                    <td>13:00 - 14:50</td>
+                                    <td></td>
+                                    <td>15:00 - 15:50</td>
+                                    <td>13:00 - 13:50</td>
+                                    <td>de un lápiz</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body></html>
+</body>
+
+</html>
