@@ -30,37 +30,161 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="tutorships_info.html">Sistema de tutorías</a>
+    <nav class="navbar navbar-expand-lg text-white" style="background-color: #660033;">
+        <a class="navbar-brand text-white" href="tutorships_info.html">Tutorías</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="tutorships_info.html">Inicio</a>
+                    <a class="nav-link text-white" href="tutorships_info.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="register_tutorship.html">Registrar tutorías</a>
+                    <a class="nav-link text-white" href="register_tutorship.html">Registrar tutorías</a>
+                </li>
+                <li>
+                    <a class="nav-link text-white" href="register_student.html">Registrar alumnos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cerrar sesión</a>
+                    <a class="nav-link text-white" href="#">Cerrar sesión</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Nombre de la tutoría" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
         </div>
     </nav>
     <div class="col-md-12 h-100">
         <div class="row">
             <div class="mt-5 container d-flex justify-content-end">
-                <button type="button" class="btn btn-outline-primary" id="add-tutorship-btn"><i class="fas fa-plus"></i> Agregar tutoría</button>
+                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#add-tutorship"><i class="fas fa-plus"></i>Agregar tutoría</button>
             </div>
         </div>
         <!-- Importante dejar el display none, a menos que quieran cambiar el archivo js en initComponents -->
-        <div class="row" id="div-form-add-tutorship" style="display: none;">
+
+
+        <div class="modal fade" id="add-tutorship" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content" role="document">
+                    <div class="modal-header">
+                        Registrar Tutoría
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <form id="add-tutorship-form" class="col-12">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-8">
+                                            <label for="uda">Unidad de aprendizaje</label>
+                                                <select id="uda" class="custom-select">
+                                                    <option selected disabled="true">Elija la unidad de aprendizaje</option>
+                                                    <option value="1">Fisica</option>
+                                                    <option value="2">Algebra</option>
+                                                    <option value="3">Cálculo</option>
+                                                </select>
+                                                <label for="profe" class="mt-2">Profesor:</label>
+                                                <select id="profe" class="custom-select">
+                                                    <option selected disabled="true">Nombre de profesor</option>
+                                                    <option value="1">Ayala</option>
+                                                    <option value="2">Trujillo</option>
+                                                    <option value="3">Alonso</option>
+                                                </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <div class="places">
+                                                <label for="places-avaible">Lugares disponibles</label>
+                                                <input type="number" class="form-control" id="places-avaible">
+                                            </div>
+                                            <label for="type-radio-div" class="mt-2">Tipo de tutoría: </label>
+                                            <div class="type d-flex justify-content-around" id="type-radio-div">
+                                                <label class="radio-inline"><input type="radio" value="1"> Regularización</label>
+                                                <label class="radio-inline"><input type="radio" value="2"> Recuperación</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                            <label for="fisrt-day">Fecha de inicio</label>
+                                            <input type="date" class="form-control" id="first-day">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="last-day">Fecha de término</label>
+                                            <input type="date" class="form-control" id="last-day">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <p class="text-justify"><b>Nota:</b> Las fechas de inicio y término dictan el día de inicio y fin de las tutorías</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <label>Horario</label>
+                                    </div>
+                                    <div class="form-row">
+                        <div class="form-group days">
+                            <div class="form-group group-with-padding">
+                                <label for="monday-begins">Lunes</label>
+                                <input type="text" class="form-control" id="monday-begins">
+                            </div>
+                            <div class="form-group group-with-padding">
+                                <label for="last-day">Martes</label>
+                                <input type="text" class="form-control" id="tuesday-begins">
+                            </div>
+                            <div class="form-group group-with-padding">
+                                <label for="last-day">Miércoles</label>
+                                <input type="text" class="form-control" id="wednesday-begins">
+                            </div>
+                            <div class="form-group group-with-padding">
+                                <label for="last-day">Jueves</label>
+                                <input type="text" class="form-control" id="thursday-begins">
+                            </div>
+                            <div class="form-group group-with-padding">
+                                <label for="last-day">Viernes</label>
+                                <input type="text" class="form-control" id="friday-begins">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label>Hora de término</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group days">
+                            <div class="form-group group-with-padding">
+                                <label for="last-day">Lunes</label>
+                                <input type="text" class="form-control" id="monday-begins">
+                            </div>
+                            <div class="form-group group-with-padding">
+                                <label for="last-day">Martes</label>
+                                <input type="text" class="form-control" id="monday-begins">
+                            </div>
+                            <div class="form-group group-with-padding">
+                                <label for="last-day">Miércoles</label>
+                                <input type="text" class="form-control" id="monday-begins">
+                            </div>
+                            <div class="form-group group-with-padding">
+                                <label for="last-day">Jueves</label>
+                                <input type="text" class="form-control" id="monday-begins">
+                            </div>
+                            <div class="form-group group-with-padding">
+                                <label for="last-day">Viernes</label>
+                                <input type="text" class="form-control" id="monday-begins">
+                            </div>
+                        </div>
+                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Registrar Tutoría</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+        
+        <!-- <div class="row" id="div-form-add-tutorship" style="display: none;">
             <div class="container rounded">
                 <form id="add-tutorship-form">
                     <div class="form-row d-flex justify-content-around flex-wrap mt-3">
@@ -166,7 +290,7 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class="row w-100">
                 <div class="container">
