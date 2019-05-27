@@ -16,6 +16,7 @@ const registerModalListeners = ()=>{
 const registerTutorshipListener = ()=>{
     $("#btn-register-tutorship").click(()=>{
         cleanHelpers();
+        cleanInvalidInputs();
         let subject = $("#selected-subject").val();
         let teacher = $("#teacher").val();
         let places = $("#places-available").val();
@@ -44,6 +45,7 @@ const registerTutorshipListener = ()=>{
         last_day_status = firstDateIsGreater(first_day, last_day);
         if(last_day_status)
             return changeHelper("last-day", last_day_status);
+        validateSchedules();
         
     });
 }
@@ -57,7 +59,74 @@ const changeInputDisplay = (input, display)=>{
 
 const changeHelper = (name, text)=>{
     $(`#${name}-helper`).text(text);
-}
+};
 const cleanHelpers = ()=>{
     $(".helper").text("");
-}
+};
+const cleanInvalidInputs = ()=>{
+    let invalid_inputs = document.querySelectorAll(".is-invalid");
+    for(let invalid_input of invalid_inputs)
+        invalid_input.className.replace(" is-invalid", "");
+};
+
+const validateSchedules = ()=> {
+    let start_inputs = document.querySelectorAll(".start-hour");
+    let end_inputs = document.querySelectorAll(".end-hour");
+    let start_helpers = document.querySelectorAll(".start-hour-helper");
+    let end_helpers = document.querySelectorAll(".end-hour-helper");
+    let _start = [];
+    let _end = [];
+    let schedule = false;
+    for(let i = 0; i< 5; i++){
+        let hour = start_inputs[i].value.split(":")[0];
+        if(!hour){
+            _start.push(0);
+            continue;
+        }
+        let hour_invalid = hourIsInvalid(hour, 7, 20);
+        if(hour_invalid){
+            start_helpers[i].textContent = hour_invalid;
+            return false;
+        }
+        _start.push(hour);
+    }
+    for(let i = 0; i < 5; i++){
+        let hour = end_inputs[i].value.split(":")[0];
+        if(!hour){
+            _end.push(0);
+            continue;
+        }
+        let hour_invalid = hourIsInvalid(hour, 8, 21);
+        if(hour_invalid){
+            end_helpers[i].textContent = hour_invalid;
+            return false;
+        }
+        _end.push(hour);
+    }
+    for(let i = 0; i < 5; i++){
+        if(_start[i] === 0 && _end[i] !== 0)
+            start_helpers[i].textContent = "Selecciona la hora a la que inicia la tutoría";
+        else if(_start[i] !== 0 && _end[i] === 0)
+            end_helpers[i].textContent = "Selecciona la hora a la que termina la tutoría";
+        else if(_start[i] === 0 || _end[i] === 0)
+            continue;
+        else if(_start[i] >= _end[i])
+            start_helpers[i].textContent = "La hora de inicio debe ser más grande que la de fin";
+        else
+            schedule = true;
+    }
+    if(!schedule){
+        start_helpers[0].textContent = "Debes definir al menor un día de horarios";
+        return false;
+    }
+    return {start: _start, end: _end};
+    
+};
+
+const hourIsInvalid = (hour, min, max)=>{
+    if(hour < min)
+        return "Escoge una hora mayor a las " + min;
+    if(hour > max)
+        return "Escoge una hora menor a las " + max;
+    return false;
+};

@@ -118,26 +118,31 @@
                                         <label>Horario</label>
                                     </div>
                                     <div class="form-row">
-                                        <div class="form-group days">
+                                        <div class="form-group days d-flex flex-wrap">
                                             <div class="form-group group-with-padding">
                                                 <label for="monday-begins">Lunes</label>
-                                                <input type="text" class="form-control" id="monday-begins">
+                                                <input type="time" class="form-control start-hour" id="monday-begins">
+                                                <small class="text-danger start-hour-helper helper"></small>
                                             </div>
                                             <div class="form-group group-with-padding">
                                                 <label for="last-day">Martes</label>
-                                                <input type="text" class="form-control" id="tuesday-begins">
+                                                <input type="time" class="form-control start-hour" id="tuesday-begins">
+                                                <small class="text-danger start-hour-helper helper"></small>
                                             </div>
                                             <div class="form-group group-with-padding">
                                                 <label for="last-day">Miércoles</label>
-                                                <input type="text" class="form-control" id="wednesday-begins">
+                                                <input type="time" class="form-control start-hour" id="wednesday-begins">
+                                                <small class="text-danger start-hour-helper helper"></small>
                                             </div>
                                             <div class="form-group group-with-padding">
                                                 <label for="last-day">Jueves</label>
-                                                <input type="text" class="form-control" id="thursday-begins">
+                                                <input type="time" class="form-control start-hour" id="thursday-begins">
+                                                <small class="text-danger start-hour-helper helper"></small>
                                             </div>
                                             <div class="form-group group-with-padding">
                                                 <label for="last-day">Viernes</label>
-                                                <input type="text" class="form-control" id="friday-begins">
+                                                <input type="time" class="form-control start-hour" id="friday-begins">
+                                                <small class="text-danger start-hour-helper helper"></small>
                                             </div>
                                         </div>
                                     </div>
@@ -145,28 +150,36 @@
                                         <label>Hora de término</label>
                                     </div>
                                     <div class="form-row">
-                                        <div class="form-group days">
+                                        <div class="form-group days d-flex flex-wrap">
                                             <div class="form-group group-with-padding">
                                                 <label for="last-day">Lunes</label>
-                                                <input type="text" class="form-control" id="monday-begins">
+                                                <input type="time" class="form-control end-hour" id="monday-begins">
+                                                <small class="text-danger end-hour-helper helper"></small>
                                             </div>
                                             <div class="form-group group-with-padding">
                                                 <label for="last-day">Martes</label>
-                                                <input type="text" class="form-control" id="monday-begins">
+                                                <input type="time" class="form-control end-hour" id="monday-begins">
+                                                <small class="text-danger end-hour-helper helper"></small>
                                             </div>
                                             <div class="form-group group-with-padding">
                                                 <label for="last-day">Miércoles</label>
-                                                <input type="text" class="form-control" id="monday-begins">
+                                                <input type="time" class="form-control end-hour" id="monday-begins">
+                                                <small class="text-danger end-hour-helper helper"></small>
                                             </div>
                                             <div class="form-group group-with-padding">
                                                 <label for="last-day">Jueves</label>
-                                                <input type="text" class="form-control" id="monday-begins">
+                                                <input type="time" class="form-control end-hour" id="monday-begins">
+                                                <small class="text-danger end-hour-helper helper"></small>
                                             </div>
                                             <div class="form-group group-with-padding">
                                                 <label for="last-day">Viernes</label>
-                                                <input type="text" class="form-control" id="monday-begins">
+                                                <input type="time" class="form-control end-hour" id="monday-begins">
+                                                <small class="text-danger end-hour-helper helper"></small>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <b class="text-justify">Por favor usa horas enteras en los horarios, los minutos serán ignorados</b>
                                     </div>
                                 </form>
                             </div>
