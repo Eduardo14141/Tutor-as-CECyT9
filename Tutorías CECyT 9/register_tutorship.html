@@ -7,25 +7,30 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Registrar tutorías</title>
     <style>
-        .days{
+        .days {
             display: flex;
             flex-wrap: nowrap;
             flex-direction: row;
         }
-        .group-with-padding{
+
+        .group-with-padding {
             padding: 0 1%;
         }
-        .form-footer{
+
+        .form-footer {
             margin-right: 2%;
         }
-        @media screen and (max-width: 600px){
-            #add-tutorship-form{
+
+        @media screen and (max-width: 600px) {
+            #add-tutorship-form {
                 margin: 0 5%;
             }
-            .days{
+
+            .days {
                 flex-wrap: wrap;
             }
         }
+
     </style>
 </head>
 
@@ -77,19 +82,19 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-8">
                                             <label for="uda">Unidad de aprendizaje</label>
-                                                <select id="uda" class="custom-select">
-                                                    <option selected disabled="true">Elija la unidad de aprendizaje</option>
-                                                    <option value="1">Fisica</option>
-                                                    <option value="2">Algebra</option>
-                                                    <option value="3">Cálculo</option>
-                                                </select>
-                                                <label for="profe" class="mt-2">Profesor:</label>
-                                                <select id="profe" class="custom-select">
-                                                    <option selected disabled="true">Nombre de profesor</option>
-                                                    <option value="1">Ayala</option>
-                                                    <option value="2">Trujillo</option>
-                                                    <option value="3">Alonso</option>
-                                                </select>
+                                            <select id="uda" class="custom-select">
+                                                <option selected disabled="true">Elija la unidad de aprendizaje</option>
+                                                <option value="1">Fisica</option>
+                                                <option value="2">Algebra</option>
+                                                <option value="3">Cálculo</option>
+                                            </select>
+                                            <label for="profe" class="mt-2">Profesor:</label>
+                                            <select id="profe" class="custom-select">
+                                                <option selected disabled="true">Nombre de profesor</option>
+                                                <option value="1">Ayala</option>
+                                                <option value="2">Trujillo</option>
+                                                <option value="3">Alonso</option>
+                                            </select>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <div class="places">
@@ -120,177 +125,67 @@
                                         <label>Horario</label>
                                     </div>
                                     <div class="form-row">
-                        <div class="form-group days">
-                            <div class="form-group group-with-padding">
-                                <label for="monday-begins">Lunes</label>
-                                <input type="text" class="form-control" id="monday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Martes</label>
-                                <input type="text" class="form-control" id="tuesday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Miércoles</label>
-                                <input type="text" class="form-control" id="wednesday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Jueves</label>
-                                <input type="text" class="form-control" id="thursday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Viernes</label>
-                                <input type="text" class="form-control" id="friday-begins">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <label>Hora de término</label>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group days">
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Lunes</label>
-                                <input type="text" class="form-control" id="monday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Martes</label>
-                                <input type="text" class="form-control" id="monday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Miércoles</label>
-                                <input type="text" class="form-control" id="monday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Jueves</label>
-                                <input type="text" class="form-control" id="monday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Viernes</label>
-                                <input type="text" class="form-control" id="monday-begins">
-                            </div>
-                        </div>
-                    </div>
+                                        <div class="form-group days">
+                                            <div class="form-group group-with-padding">
+                                                <label for="monday-begins">Lunes</label>
+                                                <input type="text" class="form-control" id="monday-begins">
+                                            </div>
+                                            <div class="form-group group-with-padding">
+                                                <label for="last-day">Martes</label>
+                                                <input type="text" class="form-control" id="tuesday-begins">
+                                            </div>
+                                            <div class="form-group group-with-padding">
+                                                <label for="last-day">Miércoles</label>
+                                                <input type="text" class="form-control" id="wednesday-begins">
+                                            </div>
+                                            <div class="form-group group-with-padding">
+                                                <label for="last-day">Jueves</label>
+                                                <input type="text" class="form-control" id="thursday-begins">
+                                            </div>
+                                            <div class="form-group group-with-padding">
+                                                <label for="last-day">Viernes</label>
+                                                <input type="text" class="form-control" id="friday-begins">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <label>Hora de término</label>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group days">
+                                            <div class="form-group group-with-padding">
+                                                <label for="last-day">Lunes</label>
+                                                <input type="text" class="form-control" id="monday-begins">
+                                            </div>
+                                            <div class="form-group group-with-padding">
+                                                <label for="last-day">Martes</label>
+                                                <input type="text" class="form-control" id="monday-begins">
+                                            </div>
+                                            <div class="form-group group-with-padding">
+                                                <label for="last-day">Miércoles</label>
+                                                <input type="text" class="form-control" id="monday-begins">
+                                            </div>
+                                            <div class="form-group group-with-padding">
+                                                <label for="last-day">Jueves</label>
+                                                <input type="text" class="form-control" id="monday-begins">
+                                            </div>
+                                            <div class="form-group group-with-padding">
+                                                <label for="last-day">Viernes</label>
+                                                <input type="text" class="form-control" id="monday-begins">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Registrar Tutoría</button>
+                        <button type="button" class="btn btn-primary" id="btn-register-tutorship">Registrar Tutoría</button>
                         <button type="button" class="btn btn-info" data-dismiss="modal">Cancelar</button>
                     </div>
                 </div>
             </div>
-            
-
         </div>
-        
-        <!-- <div class="row" id="div-form-add-tutorship" style="display: none;">
-            <div class="container rounded">
-                <form id="add-tutorship-form">
-                    <div class="form-row d-flex justify-content-around flex-wrap mt-3">
-                        <div class="form-group col-md-8">
-                            <label for="uda">Unidad de aprendizaje</label>
-                            <select id="uda" class="custom-select">
-                                <option selected disabled="true">Elija la unidad de aprendizaje</option>
-                                <option value="1">Fisica</option>
-                                <option value="2">Algebra</option>
-                                <option value="3">Cálculo</option>
-                            </select>
-                            <label for="profe" class="mt-2">Profesor:</label>
-                            <select id="profe" class="custom-select">
-                                <option selected disabled="true">Nombre de profesor</option>
-                                <option value="1">Ayala</option>
-                                <option value="2">Trujillo</option>
-                                <option value="3">Alonso</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <div class="places">
-                                <label for="places-avaible">Lugares disponibles</label>
-                                <input type="number" class="form-control" id="places-avaible">
-                            </div>
-                            <label for="type-radio-div" class="mt-2">Tipo de tutoría: </label>
-                            <div class="type d-flex justify-content-around" id="type-radio-div">
-                                <label class="radio-inline"><input type="radio" value="1"> Regularización</label>
-                                <label class="radio-inline"><input type="radio" value="2"> Recuperación</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <label for="fisrt-day">Fecha de inicio</label>
-                            <input type="date" class="form-control" id="first-day">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="last-day">Fecha de término</label>
-                            <input type="date" class="form-control" id="last-day">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <p class="text-justify"><b>Nota:</b> Las fechas de inicio y término dictan el día de inicio y fin de las tutorías</p>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <label>Hora de inicio</label>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group days">
-                            <div class="form-group group-with-padding">
-                                <label for="monday-begins">Lunes</label>
-                                <input type="text" class="form-control" id="monday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Martes</label>
-                                <input type="text" class="form-control" id="tuesday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Miércoles</label>
-                                <input type="text" class="form-control" id="wednesday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Jueves</label>
-                                <input type="text" class="form-control" id="thursday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Viernes</label>
-                                <input type="text" class="form-control" id="friday-begins">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <label>Hora de término</label>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group days">
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Lunes</label>
-                                <input type="text" class="form-control" id="monday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Martes</label>
-                                <input type="text" class="form-control" id="monday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Miércoles</label>
-                                <input type="text" class="form-control" id="monday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Jueves</label>
-                                <input type="text" class="form-control" id="monday-begins">
-                            </div>
-                            <div class="form-group group-with-padding">
-                                <label for="last-day">Viernes</label>
-                                <input type="text" class="form-control" id="monday-begins">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        <input type="reset" class="btn btn-info form-footer" value="Limpiar">
-                        <button type="button" class="btn btn-info form-footer" id="cancel-register">Cancelar</button>
-                        <button type="button" class="btn btn-primary form-footer">Registrar tutoría</button>
-                    </div>
-                </form>
-            </div>
-        </div> -->
         <div class="row">
             <div class="row w-100">
                 <div class="container">
@@ -298,40 +193,40 @@
                     <span>
                         <h3>Física III</h3>
                         <div class="card-body">
-                <table class="table">
-                    <thead style="background-color: #660033; color: snow;">
-                        <tr>
-                            <th>Profesor</th>
-                            <th>Lunes</th>
-                            <th>Martes</th>
-                            <th>Miercoles</th>
-                            <th>Jueves</th>
-                            <th>Viernes</th>
-                            <th>Apartar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Francisco Javier Ayala Falcón</td>
-                            <td>13:00-14:50</td>
-                            <td></td>
-                            <td>15:00 - 15:50</td>
-                            <td>15:00 - 16:40</td>
-                            <td></td>
-                            <td>Poner Icono</td>
-                        </tr>
-                        <tr>
-                            <td>Raúl Ayala Falcón</td>
-                            <td></td>
-                            <td>13:00 - 14:50</td>
-                            <td></td>
-                            <td>15:00 - 15:50</td>
-                            <td>13:00 - 13:50</td>
-                            <td>de un lápiz</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                            <table class="table">
+                                <thead style="background-color: #660033; color: snow;">
+                                    <tr>
+                                        <th>Profesor</th>
+                                        <th>Lunes</th>
+                                        <th>Martes</th>
+                                        <th>Miercoles</th>
+                                        <th>Jueves</th>
+                                        <th>Viernes</th>
+                                        <th>Apartar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Francisco Javier Ayala Falcón</td>
+                                        <td>13:00-14:50</td>
+                                        <td></td>
+                                        <td>15:00 - 15:50</td>
+                                        <td>15:00 - 16:40</td>
+                                        <td></td>
+                                        <td>Poner Icono</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Raúl Ayala Falcón</td>
+                                        <td></td>
+                                        <td>13:00 - 14:50</td>
+                                        <td></td>
+                                        <td>15:00 - 15:50</td>
+                                        <td>13:00 - 13:50</td>
+                                        <td>de un lápiz</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </span>
                 </div>
             </div>
@@ -341,46 +236,48 @@
                     <span>
                         <h3>Química III</h3>
                         <div class="card-body">
-                <table class="table">
-                    <thead style="background-color: #660033; color: snow;">
-                        <tr>
-                            <th>Profesor</th>
-                            <th>Lunes</th>
-                            <th>Martes</th>
-                            <th>Miercoles</th>
-                            <th>Jueves</th>
-                            <th>Viernes</th>
-                            <th>Apartar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Jorge Cortés Perez</td>
-                            <td>13:00-14:50</td>
-                            <td></td>
-                            <td>15:00 - 15:50</td>
-                            <td>15:00 - 16:40</td>
-                            <td></td>
-                            <td>Poner Icono</td>
-                        </tr>
-                        <tr>
-                            <td>Yunuen Apellidos Locos</td>
-                            <td></td>
-                            <td>13:00 - 14:50</td>
-                            <td></td>
-                            <td>15:00 - 15:50</td>
-                            <td>13:00 - 13:50</td>
-                            <td>de un lápiz</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                            <table class="table">
+                                <thead style="background-color: #660033; color: snow;">
+                                    <tr>
+                                        <th>Profesor</th>
+                                        <th>Lunes</th>
+                                        <th>Martes</th>
+                                        <th>Miercoles</th>
+                                        <th>Jueves</th>
+                                        <th>Viernes</th>
+                                        <th>Apartar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Jorge Cortés Perez</td>
+                                        <td>13:00-14:50</td>
+                                        <td></td>
+                                        <td>15:00 - 15:50</td>
+                                        <td>15:00 - 16:40</td>
+                                        <td></td>
+                                        <td>Poner Icono</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yunuen Apellidos Locos</td>
+                                        <td></td>
+                                        <td>13:00 - 14:50</td>
+                                        <td></td>
+                                        <td>15:00 - 15:50</td>
+                                        <td>13:00 - 13:50</td>
+                                        <td>de un lápiz</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </span>
-        </div>
-    </div>
+                </div>
+            </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="JS/register_tutorship.js"></script>
-</body></html>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <script src="JS/register_tutorship.js"></script>
+</body>
+
+</html>
