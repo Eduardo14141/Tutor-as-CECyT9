@@ -1,14 +1,14 @@
 
 
-const groupIsValid = (group)=>{
+const groupIsInvalid = (group)=>{
     if (!group)
         return "selecciona un grupo";
     if (!/^([1-6]{1})(i)(m|v)([0-9]{1})$/i.test(group))
         return "Al parecer ha escrito mal su grupo";
-    return true;
+    return false;
 }
 
-const imageIsValid = (image) => {
+const imageIsInvalid = (image) => {
     if (!image)
         return "Escanea y sube una fotografía infantil, fondo blanco y sin accesorios ni lentes";
     
@@ -16,10 +16,10 @@ const imageIsValid = (image) => {
     if (!/(\png|\jpg|\jpeg)$/i.test(extension[extension.length - 1]))
         return "Sólo se admiten archivos .jpg y .png";
     
-    return true;
+    return false;
 };
 
-const nameIsValid = (name) => {
+const nameIsInvalid = (name) => {
     if (!name)
         return "Ingresa tu nombre(s)";
     // Tres nombres como máximo
@@ -27,10 +27,10 @@ const nameIsValid = (name) => {
         return "Asegúrate de ingresar correctamente tu nombre";
     if (!/^[a-zá-úñü ]{2,30}$/i.test(name))
         return "Asegúrate de ingresar correctamente tu nombre";
-    return true;
+    return false;
 }
 
-const lastnameIsValid = (lastname) => {
+const lastnameIsInvalid = (lastname) => {
     if (!lastname)
         return "Ingresa tu apellido";
     // Apellido como "De La" "De Dios"
@@ -39,10 +39,10 @@ const lastnameIsValid = (lastname) => {
     if (!/^[a-zá-úñü ]{2,15}$/i.test(lastname))
         return "Asegúrate de ingresar correctamente tu nombre";
     
-    return true;
+    return false;
 };
 
-const boletaIsValid = (number) => {
+const boletaIsInvalid = (number) => {
     let date = new Date();
     if (!number)
         return "Completa este campo";
@@ -55,24 +55,24 @@ const boletaIsValid = (number) => {
     if (parseInt(number.substr(0, 4)) < date.getFullYear() - 9)
         return "La boleta no es válida";
     
-    return true;
+    return false;
 }
 
-const telephoneIsValid = (number) => {
+const telephoneIsInvalid = (number) => {
     number.replace(/ /g, "");
     if (number.length === 0)
         return "Proporciona tu teléfono para poder contactarnos contigo";
     if (!/^[0-9]{8}$/.test(number))
         return "Asegura introducir el número en formato de 8 dígitos";
-    return true;
+    return false;
 }
-const cellphoneIsValid = (number) => {
+const cellphoneIsInvalid = (number) => {
     number.replace(/ /g, "");
     if (number.length === 0)
         return "Proporciona tu celular para poder contactarnos contigo";
     if (!/^[0-9]{10}$/.test(number))
         return "Asegura introducir el número en formato de 10 dígitos";
-    return true;
+    return false;
 }
 
 const emailIsInvalid = email => {
@@ -103,6 +103,7 @@ const validateEmailName = (name) => {
         return "En el correo sólo se permiten caracteres del alfabeto inglés, guión medio, bajo, dígitos y puntos (.)";
     return false;
 };
+
 const validateEmailDomain = (domain) => {
     if (domain.length < 3)
         return "El domino del correo electrónico debe contener al menos 3 caracteres";
@@ -110,3 +111,36 @@ const validateEmailDomain = (domain) => {
         return "El dominio del correo electrónico debe corresponder al formato x.x";
     return false;
 };
+
+const firstDateIsGreater = (first_date, second_date)=>{
+    if(new Date(first_date) > new Date(second_date))
+        return "La fecha de cierre no puede ser menor a la de inicio";
+    return false;
+};
+
+const dateIsNotGreaterThanToday = (date)=>{
+    if(!date)
+        return "Completa este campo";
+    if(new Date(date) == "Invalid Date")
+        return "Formato no válido";
+    let today = new Date().setHours(0,0,0);
+    if(today - Date.parse(date) > 0 )
+        return "La fecha ya pasó, seleccione una de mañana en adelante";
+    return false;
+};
+
+const integerIsInvalid = (number)=>{
+    if(/^[0-9]+$/.test(number))
+        return false;
+    return true;
+}
+
+const placesAvailableIsInvalid = (number)=> {
+    if(!number)
+        return "Completa este campo"
+    if(!/^[0-9]+$/.test(number))
+        return "Formato no válido";
+    if(parseInt(number) > 50)
+        return "las tutorías pueden tener 50 lugares disponibles como máximo";
+    return false;
+}

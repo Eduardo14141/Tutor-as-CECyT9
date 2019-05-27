@@ -6,32 +6,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Registrar tutorías</title>
-    <style>
-        .days {
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: row;
-        }
-
-        .group-with-padding {
-            padding: 0 1%;
-        }
-
-        .form-footer {
-            margin-right: 2%;
-        }
-
-        @media screen and (max-width: 600px) {
-            #add-tutorship-form {
-                margin: 0 5%;
-            }
-
-            .days {
-                flex-wrap: wrap;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="CSS/register-tutorships.css">
 </head>
 
 <body>
@@ -81,41 +56,59 @@
                                 <form id="add-tutorship-form" class="col-12">
                                     <div class="form-row">
                                         <div class="form-group col-md-8">
-                                            <label for="uda">Unidad de aprendizaje</label>
-                                            <select id="uda" class="custom-select">
-                                                <option selected disabled="true">Elija la unidad de aprendizaje</option>
-                                                <option value="1">Fisica</option>
-                                                <option value="2">Algebra</option>
-                                                <option value="3">Cálculo</option>
-                                            </select>
-                                            <label for="profe" class="mt-2">Profesor:</label>
-                                            <select id="profe" class="custom-select">
-                                                <option selected disabled="true">Nombre de profesor</option>
-                                                <option value="1">Ayala</option>
-                                                <option value="2">Trujillo</option>
-                                                <option value="3">Alonso</option>
-                                            </select>
+                                            <div>
+                                                <label for="uda">Unidad de aprendizaje</label>
+                                                <select id="selected-subject" class="custom-select">
+                                                    <option selected disabled="true">Elija la unidad de aprendizaje</option>
+                                                    <option value="1">Fisica</option>
+                                                    <option value="2">Algebra</option>
+                                                    <option value="3">Cálculo</option>
+                                                </select>
+                                                <small id="selected-subject-helper" class="text-danger helper"></small>
+                                            </div>
+                                            <div>
+                                                <label for="teacher" class="mt-2">Profesor:</label>
+                                                <select id="teacher" class="custom-select">
+                                                    <option selected disabled="true">Nombre de profesor</option>
+                                                    <option value="1">Ayala</option>
+                                                    <option value="2">Trujillo</option>
+                                                    <option value="3">Alonso</option>
+                                                </select>
+                                                <small id="teacher-helper" class="text-danger helper"></small>
+                                            </div>
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <div class="places">
-                                                <label for="places-avaible">Lugares disponibles</label>
-                                                <input type="number" class="form-control" id="places-avaible">
+                                            <div>
+                                                <div class="places">
+                                                    <label for="places-avaible">Lugares disponibles</label>
+                                                    <input type="number" class="form-control" id="places-available">
+                                                </div>
+                                                <small id="places-available-helper" class="text-danger helper"></small>
                                             </div>
-                                            <label for="type-radio-div" class="mt-2">Tipo de tutoría: </label>
-                                            <div class="type d-flex justify-content-around" id="type-radio-div">
-                                                <label class="radio-inline"><input type="radio" value="1"> Regularización</label>
-                                                <label class="radio-inline"><input type="radio" value="2"> Recuperación</label>
+                                            <div>
+                                                <label for="type-radio-div" class="mt-2">Tipo de tutoría: </label>
+                                                <div class="type d-flex justify-content-around flex-wrap" id="type-radio-div">
+                                                    <label class="radio-inline"><input type="radio" value="1" name="tutorship-type"> Regularización</label>
+                                                    <label class="radio-inline"><input type="radio" value="2" name="tutorship-type"> Recuperación</label>
+                                                </div>
+                                                <small id="tutorship-type-helper" class="text-danger helper"></small>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-row">
-                                        <div class="form-group col-md-4">
-                                            <label for="fisrt-day">Fecha de inicio</label>
-                                            <input type="date" class="form-control" id="first-day">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="first-day">Fecha de inicio</label>
+                                                <input type="date" class="form-control" id="first-day">
+                                            </div>
+                                            <small id="first-day-helper" class="text-danger helper"></small>
                                         </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="last-day">Fecha de término</label>
-                                            <input type="date" class="form-control" id="last-day">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="last-day">Fecha de término</label>
+                                                <input type="date" class="form-control" id="last-day">
+                                            </div>
+                                            <small id="last-day-helper" class="text-danger helper"></small>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <p class="text-justify"><b>Nota:</b> Las fechas de inicio y término dictan el día de inicio y fin de las tutorías</p>
@@ -273,11 +266,11 @@
                     </span>
                 </div>
             </div>
-
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-            <script src="JS/register_tutorship.js"></script>
-</body>
-
-</html>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="JS/validations.js"></script>
+    <script src="JS/register_tutorship.js"></script>
+</body></html>

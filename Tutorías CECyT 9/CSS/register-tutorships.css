@@ -1,0 +1,23 @@
+.days {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.group-with-padding {
+    padding: 0 1%;
+}
+
+.form-footer {
+    margin-right: 2%;
+}
+
+@media screen and (max-width: 600px) {
+    #add-tutorship-form {
+        margin: 0 5%;
+    }
+
+    .days {
+        flex-wrap: wrap;
+    }
+}
