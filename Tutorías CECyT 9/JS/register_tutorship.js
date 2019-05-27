@@ -110,8 +110,10 @@ const validateSchedules = ()=> {
             end_helpers[i].textContent = "Selecciona la hora a la que termina la tutoría";
         else if(_start[i] === 0 || _end[i] === 0)
             continue;
-        else if(_start[i] >= _end[i])
-            start_helpers[i].textContent = "La hora de inicio debe ser más grande que la de fin";
+        else if(_start[i] >= _end[i]){
+            start_helpers[i].textContent = "La hora de fin debe ser más grande que la de inicio";
+            return;
+        }
         else
             schedule = true;
     }
